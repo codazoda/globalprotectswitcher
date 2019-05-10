@@ -1,33 +1,52 @@
 # Disable GlobalProtect by Network
 
-These are instructions on how to enable and disable the GlobalProtect VPN based 
-on the network connection that your Mac is connected to. The network name is 
-hard coded into the script. That is currently `DDMGuest` for this script.
+This is an application, written in AppleScript, that enables and disables the 
+GlobalProtect VPN based on the WiFi network that your Mac is connected to. The 
+network name, _DDMGuest_ is hard coded into the script.
 
-Here are the installation steps.
+## Installation Overview
 
 * Disable GlobalProtect automatic restart
-* Install the script
-* Give the script (or ScriptEditor) assistive access
+* Download the application
 * Set the script to start automatically
+* Log out and then back in to OS X
+* Give the app accessibility access
 
 ## Disable GlobalProtect automatic restart
 
 * Follow instructions at https://richddean.com/post/147155656349/stopautostartglobalprotectvpn
 
-## Install the script
+## Download the application
 
-Clone this project or save the GlobalProtectSwitcher.scpt file somewhere on 
-your Mac. The script opens or closes the GlobalProtect VPN application based 
-on the Wifi network you're connected to. It's currently written to open 
+Clone this project or save the `GlobalProtectSwitcher.app` file somewhere on 
+your Mac. The app opens or closes the GlobalProtect VPN application based 
+on the WiFi network you're connected to. It's currently written to open 
 GlobalProtect when you're on the _DDMGuest_ network and close it when you're 
-on any other network.
-
-## Give the script assistive access
-
-You will probably be prompted. Maybe. You'll need root access to the machine to 
-do this.
+on any other network. You'll have to edit the `.scrp` file and then export it as 
+an application to change the network name.
 
 ## Set the script to start automatically
 
-... TODO ...
+* Open _System Preferences_
+* Select _Users & Groups_
+* Select _Login Items_ (for your user account)
+* Click the plus (_+_) button
+* Find and select the _GlobalProtectSwitcher.app_ file
+* Optionally, check the _hide_ checkbox
+
+## Give the app accessibility access
+
+When you log back in you'll be prompted to give the application Accessibility 
+permissions. These are necessary in order for the application to automatically 
+open and close GlobalProtect.
+
+## Log out and then back in to OS X
+
+You should log out of OS X and then log back in to make sure that the 
+application starts and is working.
+
+## The Files
+
+* `README.md` is this readme file
+* `GlobalProtectSwitcher.scrp` is the AppleScript source code
+* `GlobalProtectSwitcher.app` is the compiled application
