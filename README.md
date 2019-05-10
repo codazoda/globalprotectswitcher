@@ -9,7 +9,7 @@ network name, _DDMGuest_ is hard coded into the script.
 * Disable GlobalProtect automatic restart
 * Download the application
 * Set the script to start automatically
-* Log out and then back in to OS X
+* Log out and then back in to Mac OS
 * Give the app accessibility access
 
 ## Disable GlobalProtect automatic restart
@@ -22,8 +22,9 @@ Clone this project or save the `GlobalProtectSwitcher.app` file somewhere on
 your Mac. The app opens or closes the GlobalProtect VPN application based 
 on the WiFi network you're connected to. It's currently written to open 
 GlobalProtect when you're on the _DDMGuest_ network and close it when you're 
-on any other network. You'll have to edit the `.scrp` file and then export it as 
-an application to change the network name.
+on any other network. You'll have to edit the `.scpt` file and then export it as 
+an application to change the network name. You must edit the `.scpt` file with 
+the Mac OS Script Editor.
 
 ## Set the script to start automatically
 
@@ -40,9 +41,9 @@ When you log back in you'll be prompted to give the application Accessibility
 permissions. These are necessary in order for the application to automatically 
 open and close GlobalProtect.
 
-## Log out and then back in to OS X
+## Log out and then back in to Mac OS
 
-You should log out of OS X and then log back in to make sure that the 
+You should log out of Mac OS and then log back in to make sure that the 
 application starts and is working.
 
 ## The Files
